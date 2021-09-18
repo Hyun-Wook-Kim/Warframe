@@ -1,0 +1,33 @@
+
+<container>
+
+	<sections>
+		.section.sec1 100% * 100vh
+			.section.sec1-con (max-width 1400px * 100vh)
+				.logo 460 * 170
+				ul>li>img * 3 150 * 260 (트랜지션으로 위치 변경할 것)
+				.button 500 * 60
+					>p
+
+		.section,sec2 100% * 100vh
+			.section.sec2-con
+				video 90% * 90vh
+
+		.section. sec3~5 100% * 100vh
+			.section.sec3~5-con  (background)
+				.title
+				.img
+
+		.section.sec6 100% * 100vh
+			.section.sec6-con 100*100%
+				ul (flex, width : 400%)	infinite slide
+					>li 19% 
+						>img 180*180
+
+			.light-box
+				80% * 80vh 	li 클릭시 show (닫힘 버튼 만들기)
+
+
+	<sections>
+
+<container>
