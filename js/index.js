@@ -45,7 +45,7 @@ let videoList = {
     Ryno : "http://n9e5v4d8.ssl.hwcdn.net/uploads/warframes/videos/Rhino.webm",
     Zephyr : "https://n9e5v4d8.ssl.hwcdn.net/uploads/warframes/videos/Zephyr.webm"
 }
-
+ 
 
 let warframeDesc = {
     Excalibur  : "검과 총, 그리고 균형잡힌 기동력. 엑스칼리버는 가장 기본이자 완성형 워프레임입니다",
