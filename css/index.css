@@ -5,6 +5,7 @@
 html{
     color: white;
     background: rgb(0, 0, 0);
+    word-break: keep-all;
 }
 
 
@@ -65,7 +66,9 @@ main .sections{
 main .sections .section{
     width: 100%;
     height: 100vh;
+    min-height: 550px;
     background-color: rgb(1, 1, 41);
+    padding-top: 2%;
 }
 
 main .sections .section.sec1{
@@ -75,7 +78,7 @@ main .sections .section.sec1{
 
 main .sections .section.sec1 .sec1-con{
     width: 90%;
-
+    height: auto;
     margin: 0 auto;
     border: 0px solid white;
     padding-top: 5%;
@@ -123,7 +126,8 @@ main .sections .section.sec1 .sec1-con .buttonSection{
 
 main .sections .section.sec1 .sec1-con .buttonSection .playNowButton{
     margin: 0 auto;
-    width: 500px;
+    width: 90%;
+    max-width: 500px;
     line-height: 60px;
     background-color: red;
     text-align: center;
@@ -136,4 +140,343 @@ main .sections .section.sec1 .sec1-con .mainDesc{
     border: 0px solid;
     text-align: center;
     border: 0px solid white;
+    position: relative;
+    transform: translateY(-80%);
+}
+
+main .sections .section.sec2{
+    width: 100%;
+    height: auto
+}
+
+main .sections .section.sec2 .sec2-con{
+    width:100%;
+    height: 100vh;
+    border: 0px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main .sections .section.sec2 .sec2-con .videoSection{
+    width: 100%;
+    height: auto;
+    border: 0px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+main .sections .section.sec2 .sec2-con .videoSection iframe{
+    width: 80%;
+    height: 80vh;
+    max-width:  1000px;
+    max-height: 600px;
+
+}
+
+
+main .sections .section.sec3{
+    width: 100%;
+    height: auto;
+}
+
+main .sections .section.sec3 .sec3-con{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/main/section3/section2BG.png) no-repeat 50% / cover;
+    position: relative;
+    overflow: hidden;
+}
+
+main .sections .section.sec3 .sec3-con .textBox{
+    width: 400px;
+    height: auto;
+    border: 0px solid white;
+    transform: translateX(25%);
+
+}
+
+
+main .sections .section.sec3 .sec3-con .textBox .title-left{
+    width: 100%;
+    height: auto;
+    /* line-height: 5rem; */
+    border: 1px solid red;
+    padding: 1%;
+    text-align: center;
+    position: relative;
+}
+
+main .sections .section.sec3 .sec3-con .textBox .title-left::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+
+main .sections .section.sec3 .sec3-con .textBox .descBox{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 1%;
+}
+
+
+
+main .sections .section.sec3 .sec3-con .mesaImg{
+    max-width: 400px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+main .sections .section.sec3 .sec3-con .grineerStomperImg{
+    max-width: 400px;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+
+main .sections .section.sec3 .sec3-con .mesaImg>img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main .sections .section.sec3 .sec3-con .grineerStomperImg>img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+main .sections .section.sec4 .sec4-con{
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+main .sections .section.sec4 .sec4-con .textBox{
+    /* width: 00px; */
+    height: auto;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    text-align: center;
+    
+}
+
+main .sections .section.sec4 .sec4-con .textBox .title-right{
+    /* width: 400px; */
+    margin: 0 auto;
+    height: auto;
+    border: 1px solid red;
+    position: relative;
+}
+
+main .sections .section.sec4 .sec4-con .textBox .title-right::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: red;
+    position: absolute;
+    top: 50%;
+    transform: translateX(50%);
+    }
+
+
+main .sections .section.sec4 .sec4-con .textBox .descBox{
+    width: 600px;
+    height: auto;
+    padding: 5%;
+}
+
+
+main .sections .section.sec4 .sec4-con .videoBg{
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+main .sections .section.sec4 .sec4-con .videoBg>video{
+    width: 100%;
+}
+
+
+main .sections .section.sec5 .sec5-con{
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+    background: url(../img/main/section5/section5Bg.jpg) no-repeat 50%/ cover;
+    position: relative;
+
+}
+
+main .sections .section.sec5 .sec5-con .textBox{
+    width: 400px;
+    height: auto;
+    border: 0px solid white;
+    transform: translate(25%, 50%);
+
+}
+
+
+main .sections .section.sec5 .sec5-con .textBox .title-left{
+    width: 100%;
+    height: auto;
+    /* line-height: 5rem; */
+    border: 1px solid red;
+    padding: 1%;
+    text-align: center;
+    position: relative;
+
+}
+
+main .sections .section.sec5 .sec5-con .textBox .title-left::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+main .sections .section.sec5 .sec5-con .textBox .descBox{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 1%;
+}
+
+main .sections .section.sec5 .sec5-con .animationImg{
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+    position: relative;
+}
+
+main .sections .section.sec5 .sec5-con .animationImg img{
+    width: 100%;
+    height: auto;
+    display: block;
+} 
+
+main .sections .section.sec5 .sec5-con .animationImg .bluesky{
+    width: 25%;
+    border: 0px solid;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    z-index: 2;
+    }
+main .sections .section.sec5 .sec5-con .animationImg .grasshopper{
+    width: 25%;
+    border: 0px solid;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: 2;
+}
+main .sections .section.sec5 .sec5-con .animationImg .lisetSmall{
+    width: 25%;
+    border: 0px solid;
+    position: absolute;
+    z-index: 2;
+}
+
+main .sections .section.sec6 .sec6-con{
+    width: 100%;
+    height: 100vh;
+    /* border: 3px solid yellow; */
+    min-width: 550px;
+    position: relative;
+}
+
+main .sections .section.sec6 .sec6-con .title{
+
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border: 0px solid;
+    padding-top: 5%;
+}
+
+main .sections .section.sec6 .sec6-con .title>p{
+    padding-top: 5px;
+}
+
+
+
+
+main .sections .section.sec6 .sec6-con{
+    height: 100vh;
+    background-color: black;
+}
+
+main .sections .section.sec6 .sec6-con .owl-carousel{
+    border: 0px solid;
+    width: 100%;
+    /* position: absolute;
+    bottom: 0; */
+    transform: translateY(-50%);
+}
+main .sections .section.sec6 .sec6-con .owl-carousel .warframe{
+    color: black;
+    border: 0px solid;
+    cursor: pointer;
+}
+
+main .sections .section.sec6 .sec6-con .owl-carousel .warframe::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: white;
+    display: block;
+}
+
+
+main .sections .section.sec6 .sec6-con .warframeVideo{
+    width: 100%;
+    padding-top: 2%;
+    position: relative;
+    transition: all 1s;
+
+}
+main .sections .section.sec6 .sec6-con .warframeVideo .lightBox{
+    padding: 1%;
+    width: 400px;
+    height: auto;
+    background: rgb(0, 0, 0,0.7);
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+    color: white;
+}
+
+
+
+
+main .sections .section.sec6 .sec6-con .warframeVideo video{
+    width: 100%;
+
 }
