@@ -12,7 +12,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
     <script src="plugin/owl.carousel.min.js" defer></script>
+    <script src="plugin/jquery.ripples-master/src/main.js" defer></script>
+    <script src="plugin/jquery.lazy-master/jquery.lazy.min.js" defer></script>
     <script src="js/index.js" defer></script>
+
 </head>
 
 <body>
@@ -58,11 +61,8 @@
             <div class="section sec2">
                 <div class="sec2-con">
                     <div class="videoSection">
-                        <iframe src="https://www.youtube.com/embed/MsbL8lFHrZI?controls=0?" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-
+                        <!-- <iframe widh="100%" height="100%" src="https://www.youtube.com/embed/MsbL8lFHrZI?controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <iframe width="70%" height="80%" src="https://www.youtube.com/embed/RJN1LTfwc5o?controls=1&autoplay=1&mute=1&loop=1&autopause=0?playlist="RJN1LTfwc5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -90,10 +90,10 @@
 
 
                     <div class="mesaImg">
-                        <img src="img/main/section3/warframe.png" alt="warframeMesas">
+                        <img class = "lazy" data-src="img/main/section3/warframe.png" alt="warframeMesas">
                     </div>
                     <div class="grineerStomperImg">
-                        <img src="img/main/section3/grineer.png" alt="grineerStomper">
+                        <img class = "lazy" data-src="img/main/section3/grineer.png" alt="grineerStomper">
                     </div>
 
 
@@ -105,7 +105,9 @@
                 <div class="section sec4-con">
                     <div class="sec4-con">
                         <div class="videoBg">
-                            <video src="https://n9e5v4d8.ssl.hwcdn.net/images/longlanding/desktopArsenalBg.webm" autoplay muted></video>
+                            <video src="https://n9e5v4d8.ssl.hwcdn.net/images/longlanding/desktopArsenalBg.webm" autoplay muted loop data-was-processed="true">
+                            <p>게임 내 아이템 제작소 (주조소) 영상입니다.</p>
+                            </video>
                         </div>
                         <div class="textBox">
                             <div class="title-right">
@@ -141,13 +143,13 @@
                     </div>
                     <div class="animationImg">
                         <div class="bluesky">
-                            <img src="img/main/section5/blueSky.png" alt="section5Img1">
+                            <img class = "lazy" data-src="img/main/section5/blueSky.png" alt="section5Img1">
                         </div>
                         <div class="grasshopper">
-                            <img src="img/main/section5/grasshopper.png" alt="section5Img1">
+                            <img class = "lazy" data-src="img/main/section5/grasshopper.png" alt="section5Img1">
                         </div>
                         <div class="lisetSmall">
-                            <img src="img/main/section5/lisetSmall.png" alt="section5Img1">
+                            <img class = "lazy" data-src="img/main/section5/lisetSmall.png" alt="section5Img1">
                         </div>
 
                     </div>
@@ -173,7 +175,7 @@
                         </div>
                     </div>
                     <div class="warframeList owl-carousel">
-                        <div class="warframe wf1"><img src="img/main/section6/atlas.png" alt="Atlas"></div>
+                        <div class="warframe wf1"><img class = selected src="img/main/section6/atlas.png" alt="Atlas"></div>
                         <div class="warframe wf2"><img src="img/main/section6/excal.png" alt="Excalibur"></div>
                         <div class="warframe wf3"><img src="img/main/section6/Hildrin.png" alt="Hildrin"></div>
                         <div class="warframe wf4"><img src="img/main/section6/hydroid.png" alt="Hydroid"></div>

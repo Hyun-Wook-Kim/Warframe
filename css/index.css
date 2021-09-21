@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url(common/reset.css);
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 html{
     color: white;
@@ -67,7 +67,7 @@ main .sections .section{
     width: 100%;
     height: 100vh;
     min-height: 550px;
-    background-color: rgb(1, 1, 41);
+    background-color: rgb(0, 0, 0);
     padding-top: 2%;
 }
 
@@ -122,11 +122,17 @@ main .sections .section.sec1 .sec1-con .buttonSection{
     border: 0px solid white;
     position: relative;
     transform: translateY(-100%);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+
 }
+
+
+
 
 main .sections .section.sec1 .sec1-con .buttonSection .playNowButton{
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     line-height: 60px;
     background-color: red;
@@ -134,14 +140,23 @@ main .sections .section.sec1 .sec1-con .buttonSection .playNowButton{
     font-size: 2rem;
     letter-spacing: 3px;
     cursor: pointer;
+    margin: 0 auto;
+    transition: all 1s;
 }
 
-main .sections .section.sec1 .sec1-con .mainDesc{
+
+main .sections .section.sec1 .sec1-con .buttonSection .playNowButton:hover{
+    box-shadow: 1px 1px 10px 10px red;
+}
+
+
+
+    main .sections .section.sec1 .sec1-con .mainDesc{
     border: 0px solid;
     text-align: center;
     border: 0px solid white;
     position: relative;
-    transform: translateY(-80%);
+    transform: translateY(-60%);
 }
 
 main .sections .section.sec2{
@@ -154,29 +169,21 @@ main .sections .section.sec2 .sec2-con{
     height: 100vh;
     border: 0px solid white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
 
 }
 
 main .sections .section.sec2 .sec2-con .videoSection{
     width: 100%;
-    height: auto;
-    border: 0px solid white;
+    height: 100vh;
+    /* border: 5px solid white; */
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-
-main .sections .section.sec2 .sec2-con .videoSection iframe{
-    width: 80%;
-    height: 80vh;
-    max-width:  1000px;
-    max-height: 600px;
-
-}
 
 
 main .sections .section.sec3{
@@ -234,13 +241,15 @@ main .sections .section.sec3 .sec3-con .textBox .descBox{
 
 
 main .sections .section.sec3 .sec3-con .mesaImg{
+    width: 30%;
     max-width: 400px;
     position: absolute;
     top: 40%;
-    left: 10%;
+    left: 30%;
 }
 
 main .sections .section.sec3 .sec3-con .grineerStomperImg{
+    width: 50%;
     max-width: 400px;
     position: absolute;
     top: 40%;
@@ -266,6 +275,7 @@ main .sections .section.sec4 .sec4-con{
     min-height: 550px;
     position: relative;
     overflow: hidden;
+    /* padding-bottom: ; */
 }
 
 
@@ -308,14 +318,15 @@ main .sections .section.sec4 .sec4-con .textBox .descBox{
 main .sections .section.sec4 .sec4-con .videoBg{
     width: 100%;
     height: 100vh;
-    min-height: 550px;
     position: absolute;
     top: 0;
     left: 0;
 }
 
 main .sections .section.sec4 .sec4-con .videoBg>video{
+    min-height: 550px;
     width: 100%;
+    
 }
 
 
@@ -437,7 +448,7 @@ main .sections .section.sec6 .sec6-con .owl-carousel{
     width: 100%;
     /* position: absolute;
     bottom: 0; */
-    transform: translateY(-50%);
+    transform: translateY(-30%);
 }
 main .sections .section.sec6 .sec6-con .owl-carousel .warframe{
     color: black;
@@ -479,4 +490,10 @@ main .sections .section.sec6 .sec6-con .warframeVideo .lightBox{
 main .sections .section.sec6 .sec6-con .warframeVideo video{
     width: 100%;
 
+}
+
+
+.selected{
+    transition: all 2s;
+    opacity: 0.7;
 }

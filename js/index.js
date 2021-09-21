@@ -17,7 +17,7 @@ $(document).ready(function(){
         responsiveClass:true,
         responsive:{
             0:{
-                items:2,
+                items:3,
                 nav:false
             },
             600:{
@@ -60,17 +60,42 @@ let warframeDesc = {
     Zephyr : "공중 공격과 기동성에 특화된 제피르는 그야말로 하늘의 지배자입니다."
 }
 $('.warframe').on('click',(event)=>{
-    console.log(event.target)
+    let _target = event.target
+    $('.warframe').removeClass('.selected')
     $('.warframeVideo').animate({opacity:'0'},500)
-    
+    // _target.siblings().addClass('selected')
     setTimeout(() => {
-        $('.warframeVideo>video').attr("src",videoList[event.target.alt])
-        $('h3.warframeName').html(event.target.alt)
-        $('p.warframeDesc').html(warframeDesc[event.target.alt])
+
+        $('.warframeVideo>video').attr("src",videoList[_target.alt])
+        $('h3.warframeName').html(_target.alt)
+        $('p.warframeDesc').html(warframeDesc[_target.alt])
         $('.warframeVideo').animate({opacity:'1'},500)
     }, 1200);
-    
 
-    
+    //evnet.target에 $()를 씌워주어야 jquery 객체로 적용이 된다.
+    // $('.warframe>img').animate({opacity:'1'},1000)
+    $('.warframe>img').removeClass('selected')
+    $(event.target).addClass('selected')    
+
 }
 )
+
+
+$('.section.sec1').ripples({
+    resolution: 500,
+	dropRadius: 80,
+	perturbance: 0.015,
+});
+
+
+
+
+$(window).on('scroll',()=>{
+    if($(window).scrollTop() >= $('.section.sec3').offset().top){
+        $('.mesaImg').animate({left:'10%'},1500)
+    }
+})
+
+$(function(){
+    $('.lazy').Lazy();
+})
