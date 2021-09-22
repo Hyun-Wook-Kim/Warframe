@@ -346,8 +346,9 @@ main .sections .section.sec5 .sec5-con .textBox{
     width: 400px;
     height: auto;
     border: 0px solid white;
-    transform: translate(25%, 50%);
-
+    position: absolute;
+    top: 5%;
+    left: 20%;
 }
 
 
@@ -396,9 +397,10 @@ main .sections .section.sec5 .sec5-con .animationImg img{
 
 main .sections .section.sec5 .sec5-con .animationImg .bluesky{
     width: 25%;
+    height: auto;
     border: 0px solid;
     position: absolute;
-    top: 30%;
+    bottom: 30%;
     left: 30%;
     z-index: 2;
     }
@@ -406,7 +408,7 @@ main .sections .section.sec5 .sec5-con .animationImg .grasshopper{
     width: 25%;
     border: 0px solid;
     position: absolute;
-    top: 10%;
+    bottom: 30%;
     right: 10%;
     z-index: 2;
 }
@@ -415,6 +417,7 @@ main .sections .section.sec5 .sec5-con .animationImg .lisetSmall{
     border: 0px solid;
     position: absolute;
     z-index: 2;
+    top: 50%;
 }
 
 main .sections .section.sec6 .sec6-con{
@@ -426,7 +429,7 @@ main .sections .section.sec6 .sec6-con{
 }
 
 main .sections .section.sec6 .sec6-con .title{
-    
+
     width: 100%;
     height: auto;
     text-align: center;
@@ -514,11 +517,24 @@ main .sections .section.sec6 .sec6-con .warframeVideo video{
 
 
 
+.warframeList.mobile{
+    display: none;
+}
+
+.warframeListDescBox{
+    display: none;
+}
+
+
+
 @media only screen and (max-width : 767px){
+
 
     h2{
         border: 2px solid red;
     }
+
+
 
     main .sections .section.sec3 .sec3-con .textBox{
         width: 400px;
@@ -533,12 +549,14 @@ main .sections .section.sec6 .sec6-con .warframeVideo video{
     
     main .sections .section.sec4 .sec4-con .textBox{
         width: 100%;
+        max-width: 550px;
     height: auto;
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    padding: 0 5%;
     
 }
 
@@ -554,7 +572,14 @@ main .sections .section.sec4 .sec4-con .videoBg{
     display: none;
 }
 
+main .sections .section.sec4{
+    padding: 5% 0;
 
+}
+
+main .sections .section.sec4 .sec4-con{
+    background: url(../img/mobile/section4Bg.png) no-repeat 50%/ cover;
+}
     main .sections .section.sec5 .sec5-con .textBox{
     width: 400px;
     height: auto;
@@ -566,6 +591,20 @@ main .sections .section.sec4 .sec4-con .videoBg{
     z-index: 3;
     }
     
+    main .sections .section.sec5 .sec5-con .animationImg .bluesky{
+
+        bottom: 10%;
+        left: 30%;
+
+        }
+        
+    main .sections .section.sec5 .sec5-con .animationImg .grasshopper{
+        top: 40%;
+
+    }
+
+
+
     main .sections .section.sec6 .sec6-con{
         /* border: 2px solid white; */
         min-width: 0px;
@@ -580,5 +619,92 @@ main .sections .section.sec4 .sec4-con .videoBg{
         display: none;
         
     }
+
+    .warframeList.mobile{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 4%;
+        cursor: pointer;
+    }
+    
+    .warframeList.mobile>.warframeMobile{
+        width: 50%;
+        height: auto;
+        padding: 5%;
+    }
+
+        
+    .warframeList.mobile>.warframeMobile>img{
+        display: block;
+        width: 100%;
+        height: auto;
+
+    }
+    
+    .warframeListDescBox{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        /* pointer-events: none; */
+        position: fixed;
+        top: 0%;
+        left: 0;
+        z-index: -1;
+
+    }
+    
+    .warframeListDescBox .top{
+        width: 100%;
+        height: 50vh;
+        border: 0px solid white;
+        transform: translateY(-100%);
+        background-color: rgba(0, 0, 0, 0.612);
+        transition: all 1s;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .warframeListDescBox .top .warframeName{
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .warframeListDescBox .top .warframeName>h3{
+        width: 100px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 5%;
+    }
+    
+    .warframeListDescBox .top .warframeImg{
+        width: 30%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .warframeListDescBox .top .warframeImg>img{
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: all 1s;
+    }
+
+
+        .warframeListDescBox .bottom{
+        width: 100%;
+        height: 50vh;
+        border: 0px solid white;
+        transform: translateY(100%);
+        background-color: rgba(0, 0, 0, 0.612);
+        transition: all 1s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
 
 }

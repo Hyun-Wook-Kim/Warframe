@@ -106,6 +106,31 @@ $('.warframe').on('click',(event)=>{
 )
 
 
+$('.warframeMobile').on('click',(event)=>{
+    let _target = event.target;
+    $('.warframeListDescBox').css({'z-index' : '5'})
+    $('.top').css({'transform' : 'translateY(0)'})
+    $('.bottom').css({'transform' : 'translateY(0)'})
+    $('.top>.warframeImg>img').css('opacity','1')
+    $('.top>.warframeName>h3').html(_target.alt)
+    $('.top>.warframeImg>img').attr('src',_target.src)
+    $('.warframeDescBox').html(warframeDesc[_target.alt])
+})
+
+$('.warframeListDescBox').on('click',()=>{
+    $('.top').css({'transform' : 'translateY(-100%)'})
+    $('.bottom').css({'transform' : 'translateY(100%)'})
+    $('.top>.warframeImg>img').css('opacity','0')
+    setTimeout(() => {
+        $('.warframeListDescBox').css({'z-index' : '-1'})
+        $('.top>.warframeName>h3').html("")
+        $('.top>.warframeImg>img').attr({'src':""})
+        $('.warframeDescBox').html("")
+    }, 1000);
+})
+
+
+
 $('.section.sec1').ripples({
     resolution: 500,
 	dropRadius: 80,
@@ -120,6 +145,10 @@ $(window).on('scroll',()=>{
         $('.mesaImg').animate({left:'10%'},1500)
     }
 })
+
+
+
+
 
 $(function(){
     $('.lazy').Lazy();
