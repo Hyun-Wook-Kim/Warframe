@@ -2,6 +2,10 @@
 @import url(common/reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+h2{
+    border: 1px solid red;
+}
+
 html{
     color: white;
     background: rgb(0, 0, 0);
@@ -204,7 +208,6 @@ main .sections .section.sec3 .sec3-con .textBox{
     height: auto;
     border: 0px solid white;
     transform: translateX(25%);
-
 }
 
 
@@ -212,7 +215,7 @@ main .sections .section.sec3 .sec3-con .textBox .title-left{
     width: 100%;
     height: auto;
     /* line-height: 5rem; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 1%;
     text-align: center;
     position: relative;
@@ -293,7 +296,7 @@ main .sections .section.sec4 .sec4-con .textBox .title-right{
     /* width: 400px; */
     margin: 0 auto;
     height: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: relative;
 }
 
@@ -352,7 +355,7 @@ main .sections .section.sec5 .sec5-con .textBox .title-left{
     width: 100%;
     height: auto;
     /* line-height: 5rem; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 1%;
     text-align: center;
     position: relative;
@@ -423,13 +426,22 @@ main .sections .section.sec6 .sec6-con{
 }
 
 main .sections .section.sec6 .sec6-con .title{
-
+    
     width: 100%;
     height: auto;
     text-align: center;
     border: 0px solid;
     padding-top: 5%;
 }
+
+main .sections .section.sec6 .sec6-con .title>h2{
+
+    max-width: 500px;
+
+    margin: 0 auto;
+}
+
+
 
 main .sections .section.sec6 .sec6-con .title>p{
     padding-top: 5px;
@@ -449,11 +461,13 @@ main .sections .section.sec6 .sec6-con .owl-carousel{
     /* position: absolute;
     bottom: 0; */
     transform: translateY(-30%);
+    padding: 0 5%;
 }
+
 main .sections .section.sec6 .sec6-con .owl-carousel .warframe{
-    color: black;
-    border: 0px solid;
+color: black;
     cursor: pointer;
+
 }
 
 main .sections .section.sec6 .sec6-con .owl-carousel .warframe::after{
@@ -470,7 +484,7 @@ main .sections .section.sec6 .sec6-con .warframeVideo{
     padding-top: 2%;
     position: relative;
     transition: all 1s;
-
+    
 }
 main .sections .section.sec6 .sec6-con .warframeVideo .lightBox{
     padding: 1%;
@@ -496,4 +510,75 @@ main .sections .section.sec6 .sec6-con .warframeVideo video{
 .selected{
     transition: all 2s;
     opacity: 0.7;
+}
+
+
+
+@media only screen and (max-width : 767px){
+
+    h2{
+        border: 2px solid red;
+    }
+
+    main .sections .section.sec3 .sec3-con .textBox{
+        width: 400px;
+        height: auto;
+        border: 0px solid white;
+        margin:0 auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    
+    main .sections .section.sec4 .sec4-con .textBox{
+        width: 100%;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    
+}
+
+
+main .sections .section.sec4 .sec4-con .textBox .descBox{
+    width: 100%;
+    height: auto;
+    padding: 1%;
+    text-align: center;
+}
+
+main .sections .section.sec4 .sec4-con .videoBg{
+    display: none;
+}
+
+
+    main .sections .section.sec5 .sec5-con .textBox{
+    width: 400px;
+    height: auto;
+    border: 0px solid white;
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    }
+    
+    main .sections .section.sec6 .sec6-con{
+        /* border: 2px solid white; */
+        min-width: 0px;
+    }
+
+
+    main .sections .section.sec6 .sec6-con .owl-carousel{
+        display: none;
+    }
+    
+    main .sections .section.sec6 .sec6-con .warframeVideo{
+        display: none;
+        
+    }
+
 }

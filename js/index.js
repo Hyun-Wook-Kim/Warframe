@@ -1,12 +1,35 @@
 'use strict';
 
+function mainSecAnimation(){
+
+    if($(window).width() >= 767){
+
+            $('.imgSection>ul>li>img').css('transition','all 3s')
+            $('.imgSection>ul>li>img').eq(0).css({'transform':'translate(-50%,-10%) scale(1.2)'})
+            $('.imgSection>ul>li>img').eq(1).css({'transform':'translate(0%,-30%) scale(1.2)'})
+            $('.imgSection>ul>li>img').eq(2).css({'transform':'translate(50%,-10%) scale(1.2)'})
+            
+
+    }
+    
+    else{
+        $('.imgSection>ul>li>img').css('transition','all 3s')
+        $('.imgSection>ul>li>img').eq(0).css({'transform':'none'})
+        $('.imgSection>ul>li>img').eq(1).css({'transform':'none'})
+        $('.imgSection>ul>li>img').eq(2).css({'transform':'none'})
+        
+    }
+}
+
 $(window).on('load',()=>{
-    $('.imgSection>ul>li>img').css('transition','all 3s')
-    $('.imgSection>ul>li>img').eq(0).css({'transform':'translate(-50%,-10%) scale(1.2)'})
-    $('.imgSection>ul>li>img').eq(1).css({'transform':'translate(0%,-30%) scale(1.2)'})
-    $('.imgSection>ul>li>img').eq(2).css({'transform':'translate(50%,-10%) scale(1.2)'})
+    mainSecAnimation();
+})
+
+$(window).on('resize',()=>{
+    mainSecAnimation();
 
 })
+
 
 // $('.section.sec1').tilt();
 
@@ -17,10 +40,10 @@ $(document).ready(function(){
         responsiveClass:true,
         responsive:{
             0:{
-                items:3,
+                items:2,
                 nav:false
             },
-            600:{
+            767:{
                 items:4,
                 nav:false
             },
@@ -59,6 +82,8 @@ let warframeDesc = {
     Ryno : "라이노는 가장 육중한 워프레임입니다. 공방일체란 이 워프레임을 두고 하는 말일테죠",
     Zephyr : "공중 공격과 기동성에 특화된 제피르는 그야말로 하늘의 지배자입니다."
 }
+
+
 $('.warframe').on('click',(event)=>{
     let _target = event.target
     $('.warframe').removeClass('.selected')
